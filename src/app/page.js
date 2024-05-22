@@ -1,4 +1,5 @@
 import Banner from "@/components/Banner/Banner";
+import InfoDivider from "@/components/InfoDivider/InfoDivider";
 import OpcionesSwiper from "@/components/OpcionesSwiper/OpcionesSwiper";
 import YourFav from "@/components/YourFav/YourFav";
 
@@ -14,6 +15,9 @@ export default function Home() {
         <OpcionesSwiper/>
         <section>
           <YourFav/>
+        </section>
+        <section className="mt-12 ">
+          <InfoDivider/>
         </section>
       </div>
     </header>

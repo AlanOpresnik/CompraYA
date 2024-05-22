@@ -45,4 +45,9 @@
 
 .bg-body__gradient {
   background: rgb(255,255,255);
-  background: linear-gradient(180deg, rgba(255,255,255,1) 61%, rgba(238,235,209,1) 84%, rgba(255,255,255,1) 100%);}
+  background: linear-gradient(180deg, rgba(255,255,255,1) 41%, rgba(238,235,209,1) 84%, rgba(255,255,255,1) 100%);}
+
+  .rotate{
+    transform: rotate(300deg);
+
+  }
