@@ -5,7 +5,7 @@ const Search = () => {
         <div className="relative w-full mt-1 max-w-lg mx-auto">
             <input
                 type="search"
-                className="w-full py-2 px-3 pr-10 border text-md border-gray-300 rounded-lg focus:outline-none focus:border-blue-500 placeholder-gray-500"
+                className="w-full py-2 px-3 pr-10 border text-md border-gray-300 rounded md:rounded-lg focus:outline-none focus:border-blue-500 placeholder-gray-500"
                 placeholder="Buscar productos, marcas y más..."
             />
             <button className="absolute  border-l pl-3 top-1/2  right-2 transform -translate-y-1/2">

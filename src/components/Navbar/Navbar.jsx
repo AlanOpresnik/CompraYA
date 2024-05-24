@@ -25,7 +25,7 @@ const Navbar = () => {
         };
     }, []);
     return (
-        <div className='w-full fixed top-0 z-50 py-2 md:py-2 bg-[#ece6b8] '>
+        <div className='w-full fixed top-0 z-50 py-2 md:py-2 main-color '>
             {mobile ? (
                 <NavbarMobile />
             ) : (

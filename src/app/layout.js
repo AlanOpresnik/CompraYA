@@ -1,8 +1,8 @@
-import { Inter, Poppins, Roboto } from "next/font/google";
+import { Inter, Lato, Onest, Poppins, Roboto } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar/Navbar";
 
-const poppins = Poppins({ subsets: ["latin"], weight: ["100", "300", "400", "500", "700", "900"]});
+const poppins = Lato({ subsets: ["latin"], weight: ["100", "300", "400", "700", "900"]});
 
 export const metadata = {
   title: "Compra",

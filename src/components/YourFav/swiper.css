@@ -1,0 +1,27 @@
+.custom-swiper .swiper-button-prev,
+.custom-swiper .swiper-button-next {
+    color: #ffffff;
+    /* Cambia el color del botón */
+    background-color: rgba(255, 255, 255);
+    /* Fondo semi-transparente */
+    padding: 10px;
+    /* Espaciado interno */
+    border-radius: 50%;
+    /* Botones redondos */
+    border: 1px solid rgba(0, 0, 0, 0.416);
+    width: 40px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.custom-swiper .swiper-button-prev:hover,
+.custom-swiper .swiper-button-next:hover {
+    background-color: rgba(226, 221, 221, 0.7);
+    /* Fondo más oscuro al pasar el ratón */
+}
+
+.custom-swiper .swiper-button-prev::after,
+.custom-swiper .swiper-button-next::after {
+    color: black;
+    font-size: 20px;
+    /* Tamaño del icono */
+}

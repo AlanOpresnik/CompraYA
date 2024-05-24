@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+.main-color {
+  background-color: #fdac3a;
+  
+}
+
 .remove_bg {
   filter: brightness(1.1);
   mix-blend-mode: darken;
@@ -44,10 +49,20 @@
 }
 
 .bg-body__gradient {
-  background: rgb(255,255,255);
-  background: linear-gradient(180deg, rgba(255,255,255,1) 41%, rgba(238,235,209,1) 84%, rgba(255,255,255,1) 100%);}
+  background: rgb(255, 255, 255);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 1) 41%, #a4a19e30 84%, rgba(255, 255, 255, 1) 100%);
+}
+.rotate {
+  transform: rotate(300deg);
+}
 
-  .rotate{
-    transform: rotate(300deg);
+.section-products-interest-bg {
+  background: rgb(255, 255, 255);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 1) 35%, rgba(237, 237, 237, 1) 56%, rgba(237, 237, 237, 1) 100%);
+}
 
-  }
+.section-categories-interest-bg {
+  background: rgb(237, 237, 237);
+  background: linear-gradient(180deg, rgba(237, 237, 237, 1) 0%, rgba(237, 237, 237, 1) 56%, rgba(255, 255, 255, 1) 100%);
+}
+

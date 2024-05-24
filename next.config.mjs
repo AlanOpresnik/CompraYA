@@ -7,7 +7,8 @@ const nextConfig = {
        'images.vexels.com', 
        'encrypted-tbn0.gstatic.com',
         'static.wikia.nocookie.net',
-      'cdn-icons-png.flaticon.com'
+      'cdn-icons-png.flaticon.com',
+      'images.tiendamia.com'
       ],
   },
 };
