@@ -18,6 +18,7 @@ const NavbarDesktop = () => {
                     <Link href={'/mis-compras'}>Historial</Link>
                     <Link href={'/mis-compras'}>Ayuda</Link>
                     <Link href={'/mis-compras'}>Vender</Link>
+                    <Link href={'/mis-compras'}>Mayorista</Link>
                 </div>
             </div>
             <div className='flex items-center gap-6 text-sm justify-end'>

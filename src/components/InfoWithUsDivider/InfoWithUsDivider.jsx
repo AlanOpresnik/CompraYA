@@ -7,24 +7,25 @@ const InfoWithUsDivider = () => {
     {
       title: "Compra Segura",
       description:
-        "Compra tranquilo, Nos manejamos con Mercado Pago",
-      img: "https://images.vexels.com/media/users/3/200982/isolated/preview/5830c3a552a6cfc31b5d1f995397e294-mano-con-mano-de-icono-de-dinero.png",
+        "tranquilo, tu plata siempre segura, Nos manejamos con Mercado Pago",
+      img: "https://cdn.icon-icons.com/icons2/2785/PNG/512/shopping_bag_icon_177404.png",
     },
     {
       title: "Mensajeria vendedor",
       description:
         "CompraYA intengra un chat con el vendedor para estar siempre comunicado",
-      img: "https://cdn-icons-png.flaticon.com/512/5291/5291686.png",
+      img: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Line-style-icons-chat.svg/1200px-Line-style-icons-chat.svg.png",
     },
     {
-      title: "Descuentos cada mes!",
+      title: "Sección Mayorista",
       description:
-        "Cada mes damos un cupon de descuento para comprar en la web!",
-      img: "https://static.wikia.nocookie.net/animalcrossing/images/7/74/Cup%C3%B3n_de_millas_Nook.png/revision/latest?cb=20210214201048&path-prefix=es",
+        "CompraYA intengra una sección Mayorista de los productos que mecesites",
+      img: "https://uxwing.com/wp-content/themes/uxwing/download/e-commerce-currency-shopping/find-product-icon.png",
     },
+
   ];
   return (
-    <div className="flex flex-col items-center md:flex-row gap-12 mb-12">
+    <div className="flex flex-col justify-center items-center md:flex-row gap-12 mb-12">
       {infos.map((info) => (
         <InfoWithUsDividerCard key={info.title} info={info} />
       ))}

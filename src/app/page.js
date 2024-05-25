@@ -32,8 +32,8 @@ export default function Home() {
       <div className="section-products-interest-bg ">
       <div className="max-w-[1250px] mx-auto">
 
-          <h4 className="text-xl md:text-[1.32rem] mb-6">
-            Estos productos te pueden interesar 🫢{" "}
+          <h4 className="text-xl mx-4 md:text-[1.32rem] mb-6">
+            Estos productos te pueden interesar 😬{" "}
           </h4>
       </div>
         <section className="max-w-[1250px] mx-4 md:mx-auto p-4 rounded-lg shadow-lg border  bg-white">

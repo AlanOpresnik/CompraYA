@@ -15,17 +15,13 @@ const Navbar = () => {
         };
 
         handleResize();
-
-
         window.addEventListener('resize', handleResize);
-
-
         return () => {
             window.removeEventListener('resize', handleResize);
         };
     }, []);
     return (
-        <div className='w-full fixed top-0 z-50 py-2 md:py-2 main-color '>
+        <div className='w-full fixed top-0 z-50 py-2 md:py-2 main-color shadow '>
             {mobile ? (
                 <NavbarMobile />
             ) : (

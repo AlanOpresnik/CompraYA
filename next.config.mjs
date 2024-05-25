@@ -2,14 +2,16 @@
 const nextConfig = {
   images: {
     domains: ['img.freepik.com',
-     'http2.mlstatic.com',
+      'http2.mlstatic.com',
       'res.cloudinary.com',
-       'images.vexels.com', 
-       'encrypted-tbn0.gstatic.com',
-        'static.wikia.nocookie.net',
+      'images.vexels.com',
+      'static.wikia.nocookie.net',
       'cdn-icons-png.flaticon.com',
-      'images.tiendamia.com'
-      ],
+      "cdn.icon-icons.com",
+      "upload.wikimedia.org",
+      "fakestoreapi.com",
+      'uxwing.com'
+    ],
   },
 };
 
