@@ -10,7 +10,8 @@ const nextConfig = {
       "cdn.icon-icons.com",
       "upload.wikimedia.org",
       "fakestoreapi.com",
-      'uxwing.com'
+      'uxwing.com',
+      'www.nicepng.com'
     ],
   },
 };

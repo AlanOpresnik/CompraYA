@@ -9,11 +9,13 @@ const ProductsContext = createContext();
 const ProductsProvider = ({ children }) => {
     const [products, setProducts] = useState([]);
     const [product, setProduct] = useState([]);
+    const [loading, setLoading] = useState(true);
 
     const getAllProducts = async () => {
         try {
             const res = await axios('https://fakestoreapi.com/products')
             setProducts(res.data)
+            setLoading(false)
 
         } catch (error) {
             console.log(error)
@@ -24,11 +26,14 @@ const ProductsProvider = ({ children }) => {
         getAllProducts()
     }, [])
 
+
     const getProductById = async (id) => {
         try {
+            setLoading(true)
             const res = await axios(`https://fakestoreapi.com/products/${id}`)
             setProduct(res.data)
             console.log(res.data)
+            setLoading(false)
         } catch (error) {
             console.log(error)
         }
@@ -37,7 +42,7 @@ const ProductsProvider = ({ children }) => {
 
 
     return (
-        <ProductsContext.Provider value={{ products, product,getProductById }}>
+        <ProductsContext.Provider value={{ products, product,getProductById,loading }}>
             {children}
         </ProductsContext.Provider>
     );
