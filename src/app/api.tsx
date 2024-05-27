@@ -6,7 +6,7 @@ import { getPlaiceholder } from "plaiceholder";
  */
 const getImage = async (src: string, alt: string) => {
   const buffer = await fetch(src).then(async (res) =>
-    Buffer.from(await res.arrayBuffer()),
+    Buffer.from(await res.arrayBuffer())
   );
 
   const {
@@ -28,14 +28,14 @@ async function get(url: string) {
 
   if (!response.ok) {
     throw new Error(
-      `Request to ${url} failed. Status: ${response.status} ${response.statusText}`,
+      `Request to ${url} failed. Status: ${response.status} ${response.statusText}`
     );
   }
 
   return response.json();
 }
 
- interface Product {
+interface Product {
   id: number;
   title: string;
   price: number;
@@ -45,18 +45,18 @@ async function get(url: string) {
   rating: Rating;
 }
 
- type Category =
+type Category =
   | "men's clothing"
   | "jewelery"
   | "electronics"
   | "women's clothing";
 
- interface Rating {
+interface Rating {
   rate: number;
   count: number;
 }
 
- type Products = Product[];
+type Products = Product[];
 
 export const api = {
   getProducts: async () => {
@@ -66,9 +66,18 @@ export const api = {
       products.map(async (product) => ({
         ...product,
         image: await getImage(product.image, ""),
-      })),
+      }))
     );
+  },
+  getProductById: async (id: number) => {
+    const product = (await get(`${baseUrl}/products/${id}`)) as Product;
+
+    return {
+      ...product,
+      image: await getImage(product.image, ""),
+    };
   },
 };
 
 export type ProductsWithImages = Awaited<ReturnType<typeof api.getProducts>>;
+export type ProductWithImage = Awaited<ReturnType<typeof api.getProductById>>;

@@ -51,7 +51,7 @@ const Slides = ({products}) => {
         className="mySwiper custom-swiper h-[405px]"
       >
         {products?.map((product) => (
-          <SwiperSlide>
+          <SwiperSlide key={product.id}>
               <YourFavCard product={product} />
           </SwiperSlide>
         ))}

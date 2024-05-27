@@ -1,10 +1,12 @@
-import {Lato } from "next/font/google";
-import "./globals.css";
-import Navbar from "@/components/Navbar/Navbar";
 import Footer from "@/components/Footer/Footer";
-import { ProductsProvider } from "@/context/ProductsContext";
+import Navbar from "@/components/Navbar/Navbar";
+import { Lato } from "next/font/google";
+import "./globals.css";
 
-const poppins = Lato({ subsets: ["latin"], weight: ["100", "300", "400", "700", "900"] });
+const poppins = Lato({
+  subsets: ["latin"],
+  weight: ["100", "300", "400", "700", "900"],
+});
 
 export const metadata = {
   title: "Compra",
@@ -14,15 +16,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <ProductsProvider>
-        <body className={poppins.className}>
-          <Navbar />
-          <div className="">
-            {children}
-          </div>
-          <Footer />
-        </body>
-      </ProductsProvider>
+      <body className={poppins.className}>
+        <Navbar />
+        <div>{children}</div>
+        <Footer />
+      </body>
     </html>
   );
 }
