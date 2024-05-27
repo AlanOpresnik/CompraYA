@@ -1,5 +1,6 @@
 import Footer from "@/components/Footer/Footer";
 import Navbar from "@/components/Navbar/Navbar";
+import { AppRouterCacheProvider } from "@mui/material-nextjs/v13-appRouter";
 import { Lato } from "next/font/google";
 import "./globals.css";
 
@@ -17,9 +18,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={poppins.className}>
-        <Navbar />
-        <div>{children}</div>
-        <Footer />
+        <AppRouterCacheProvider>
+          <Navbar />
+          <div>{children}</div>
+          <Footer />
+        </AppRouterCacheProvider>
       </body>
     </html>
   );

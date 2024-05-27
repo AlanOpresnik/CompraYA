@@ -1,4 +1,3 @@
-
 import Banner from "@/components/Banner/Banner";
 import InfoDivider from "@/components/InfoDivider/InfoDivider";
 import InfoWithUsDivider from "@/components/InfoWithUsDivider/InfoWithUsDivider";
@@ -7,8 +6,12 @@ import YourFav from "@/components/YourFav/YourFav";
 import { Skeleton } from "@mui/material";
 import Link from "next/link";
 import { Suspense } from "react";
+import { api } from "./api";
 
 export default function Home() {
+  // pre-fetch queries as soon as the page is requested
+  api.getProducts();
+
   return (
     <>
       <header className="bg-body__gradient">
@@ -42,7 +45,12 @@ export default function Home() {
         <section className="max-w-[1250px] mx-4 md:mx-auto p-4 rounded-lg shadow-lg border  bg-white">
           <Suspense
             fallback={
-              <Skeleton variant="rectangular" width={100} height={100} className="!bg-black" />
+              <Skeleton
+                variant="rectangular"
+                width={100}
+                height={100}
+                className="!bg-black"
+              />
             }
           >
             <YourFav />
