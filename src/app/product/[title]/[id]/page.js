@@ -1,12 +1,14 @@
-import Product from '@/components/Product/Product'
-import React from 'react'
+import Product from "@/components/Product/Product";
+import { api } from "@/components/Slides/api";
 
-const page = () => {
+const ProductPage = async ({ params: { id } }) => {
+  const product = await api.getProductById(id);
+
   return (
-    <div className='pt-0 md:pt-20  mx-auto '>
-      <Product/>
+    <div className="pt-0 md:pt-20  mx-auto ">
+      <Product product={product} />
     </div>
-  )
-}
+  );
+};
 
-export default page
+export default ProductPage;

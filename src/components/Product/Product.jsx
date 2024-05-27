@@ -1,36 +1,27 @@
 "use client";
-import { ProductsContext } from "@/context/ProductsContext";
-import {
-  FavoriteBorderOutlined,
-} from "@mui/icons-material";
+import { FavoriteBorderOutlined } from "@mui/icons-material";
 import { Button, Rating } from "@mui/material";
 import Image from "next/image";
 import { useParams } from "next/navigation";
-import React, { useContext, useEffect, useState } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
+import { useState } from "react";
 
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/navigation";
 import "swiper/css/thumbs";
 
-import { FreeMode, Navigation, Thumbs } from "swiper/modules";
 import YourFav from "../YourFav/YourFav";
 import QuestionsProduct from "./Questions/QuestionsProduct";
 
-const Product = () => {
+const Product = ({ product }) => {
   const [activeThumb, setActiveThumb] = useState();
   const params = useParams();
-  const { product, getProductById, loading } = useContext(ProductsContext);
-  useEffect(() => {
-    getProductById(params.id);
-  }, []);
 
   return (
     <div className="bg-white pt-16">
       {loading ? (
         <div className="w-full flex justify-center items-center h-[100vh]">
-        <div className="loader"></div>
+          <div className="loader"></div>
         </div>
       ) : (
         <>
@@ -109,7 +100,12 @@ const Product = () => {
                     </Button>
                   </div>
                   <div className="mt-8">
-                    <p className="text-sm">Envio por: <span className="text-green-600 p-2 rounded-lg font-bold bg-green-100">Vendedor</span></p>
+                    <p className="text-sm">
+                      Envio por:{" "}
+                      <span className="text-green-600 p-2 rounded-lg font-bold bg-green-100">
+                        Vendedor
+                      </span>
+                    </p>
                   </div>
                 </div>
                 <div className="mt-0 max-w-md flex gap-4">
@@ -124,7 +120,7 @@ const Product = () => {
             </div>
           </div>
           <section className="max-w-[1280px] px-5 mt-24 md:mx-auto border-t pt-12">
-            <QuestionsProduct/>
+            <QuestionsProduct />
           </section>
           <div className="mt-24 max-w-[1280px] px-5 md:mx-auto ">
             <p className="text-xl mb-6">Productos que podrian interesarte</p>
