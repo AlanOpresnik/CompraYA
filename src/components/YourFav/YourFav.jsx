@@ -1,6 +1,6 @@
+import { api } from "@/app/api";
 import { Skeleton } from "@mui/material";
 import { Suspense } from "react";
-import { api } from "../../app/api";
 import Slides from "../Slides/Slides";
 
 const Products = async () => {
