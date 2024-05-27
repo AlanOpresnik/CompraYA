@@ -1,4 +1,4 @@
-import { Inter, Lato, Onest, Poppins, Roboto } from "next/font/google";
+import {Lato } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar/Navbar";
 import Footer from "@/components/Footer/Footer";

@@ -108,6 +108,9 @@ const Product = () => {
                       -
                     </Button>
                   </div>
+                  <div className="mt-8">
+                    <p className="text-sm">Envio por: <span className="text-green-600 p-2 rounded-lg font-bold bg-green-100">Vendedor</span></p>
+                  </div>
                 </div>
                 <div className="mt-0 max-w-md flex gap-4">
                   <Button

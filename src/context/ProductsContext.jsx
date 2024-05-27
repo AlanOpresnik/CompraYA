@@ -23,9 +23,10 @@ const ProductsProvider = ({ children }) => {
     }
 
     useEffect(() => {
-        getAllProducts()
+    getAllProducts()
     }, [])
-
+    
+    
 
     const getProductById = async (id) => {
         try {
@@ -42,7 +43,7 @@ const ProductsProvider = ({ children }) => {
 
 
     return (
-        <ProductsContext.Provider value={{ products, product,getProductById,loading }}>
+        <ProductsContext.Provider value={{ products, product,getProductById,loading,getAllProducts }}>
             {children}
         </ProductsContext.Provider>
     );
