@@ -1,6 +1,5 @@
-
-import React, { Suspense, useContext } from "react";
-import { Skeleton, Slide } from "@mui/material";
+import { Skeleton } from "@mui/material";
+import { Suspense } from "react";
 import Slides from "../Slides/Slides";
 import { api } from "../Slides/api";
 
@@ -13,10 +12,9 @@ const Products = async () => {
   });
 
   return <Slides products={productsLoaded} />;
-}
+};
 
 const YourFav = async () => {
-
   return (
     <div>
       <Suspense fallback={<Skeleton />}>
