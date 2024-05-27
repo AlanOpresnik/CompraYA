@@ -6,25 +6,25 @@ import Search from '../search/Search';
 
 const NavbarDesktop = () => {
     return (
-        <div className='grid grid-cols-3 gap-2   max-w-[1380px] mx-auto items-center'>
-            <div>
+        <div className='grid grid-cols-3 gap-2  max-w-[1380px]  md:max-w-[1250px] mx-auto items-center'>
+            <a href={'/'}>
                 CompraYA
-            </div>
+            </a>
             <div>
                <Search/>
                 <div className='flex justify-between text-[0.80rem]  py-1 mt-1'>
                     <Link href={'/mis-compras'}>Ofertas</Link>
                     <Link href={'/mis-compras'}>Moda</Link>
                     <Link href={'/mis-compras'}>Historial</Link>
-                    <Link href={'/mis-compras'}>Ayuda</Link>
-                    <Link href={'/mis-compras'}>Vender</Link>
-                    <Link href={'/mis-compras'}>Mayorista</Link>
+                    <Link className='hidden md:block ' href={'/mis-compras'}>Ayuda</Link>
+                    <Link className='hidden lg:block ' href={'/mis-compras'}>Vender</Link>
+                    <Link className='hidden lg:block ' href={'/mis-compras'}>Mayorista</Link>
                 </div>
             </div>
             <div className='flex items-center gap-6 text-sm justify-end'>
                 <div className='flex items-center gap-1 text-sm'>
                     <Avatar alt="Remy Sharp" src="https://img.freepik.com/foto-gratis/hombre-feliz-pie-playa_107420-9868.jpg?1" />
-                    <p>Alan</p>
+                    <Link href={'/my-profile'}>Alan</Link>
                 </div>
                 <div className='flex items-center gap-6'>
                     <Link href={'/mis-compras'}>Mis compras</Link>
