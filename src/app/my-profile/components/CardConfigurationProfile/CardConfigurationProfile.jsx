@@ -31,7 +31,7 @@ const CardConfigurationProfile = () => {
             {cards.map((card => (
                 <Link href={card.path} key={card.title} className='flex  gap-6 mb-12 last-of-type:mb-0 relative '>
                     <div className='rounded-full border p-2 '>
-                        <Image className='object-contain' width={30 } height={30} src={card.icon} alt={card.desc} />
+                        <Image className='object-contain' width={30} height={30} src={card.icon} alt={card.desc} />
                     </div>
                     <div className=''>
                         <h4 className='font-semibold'>{card.title}</h4>
