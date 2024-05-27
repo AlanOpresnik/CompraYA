@@ -8,7 +8,7 @@ const Products = async () => {
   const productsLoaded = await new Promise((resolve) => {
     setTimeout(() => {
       resolve(products);
-    }, 5000);
+    }, 700);
   });
 
   return <Slides products={productsLoaded} />;
@@ -16,8 +16,8 @@ const Products = async () => {
 
 const YourFav = async () => {
   return (
-    <div>
-      <Suspense fallback={<Skeleton />}>
+    <div className="">
+      <Suspense fallback={<div className="h-[375px] relative"><Skeleton className="w-full relative top-[-70px] !h-[455px]"/></div>}>
         <Products />
       </Suspense>
     </div>

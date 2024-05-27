@@ -102,7 +102,7 @@ const Product = async ({ id }) => {
             <div className="mt-0 max-w-md flex gap-4">
               <Button
                 type="button"
-                className="w-full rounded-full md:rounded-xl mt-8 px-4 py-2 bg-transparent border-2 !bg-blue-500 border-gray-800 text-white font-bold"
+                className="!w-full !rounded-full md:!rounded-xl !mt-8 !px-4 !py-2  !bg-blue-500  !text-white !font-bold"
               >
                 Agregar al carrito
               </Button>

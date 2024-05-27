@@ -4,12 +4,12 @@ import React from "react";
 
 const YourFavCard = ({ product }) => {
   const replaceSpacesWithHyphens = (text) => {
-    return text.split(" ").join("-");
+    return text.replace(/[\s/]+/g, "-");
   };
   return (
     <Link
       href={`/product/${replaceSpacesWithHyphens(product.title)}/${product.id}`}
-      className=" flex flex-col justify-center min-w-[180px]  md:w-[230px] bg-white rounded-xl shadow-sm hover:shadow-lg mb-12 "
+      className=" cursor-pointer flex flex-col justify-center min-w-[180px]  md:w-[230px] bg-white rounded-xl shadow-sm hover:shadow-lg mb-12 "
     >
       <div className="flex border-b justify-center py-6">
         <Image
