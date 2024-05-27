@@ -11,7 +11,8 @@ const nextConfig = {
       "upload.wikimedia.org",
       "fakestoreapi.com",
       'uxwing.com',
-      'www.nicepng.com'
+      'www.nicepng.com',
+      "cdn-icons-png.freepik.com"
     ],
   },
 };
