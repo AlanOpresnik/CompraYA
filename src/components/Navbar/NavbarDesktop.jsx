@@ -1,8 +1,8 @@
-import { Avatar } from '@mui/material'
 import Link from 'next/link'
 import React from 'react'
 import LocalMallOutlinedIcon from '@mui/icons-material/LocalMallOutlined';
 import Search from '../search/Search';
+import ProfileClient from './ProfileClient'
 
 const NavbarDesktop = () => {
     return (
@@ -11,7 +11,7 @@ const NavbarDesktop = () => {
                 CompraYA
             </a>
             <div>
-               <Search/>
+                <Search />
                 <div className='flex justify-between text-[0.80rem]  py-1 mt-1'>
                     <Link href={'/mis-compras'}>Ofertas</Link>
                     <Link href={'/mis-compras'}>Moda</Link>
@@ -22,15 +22,11 @@ const NavbarDesktop = () => {
                 </div>
             </div>
             <div className='flex items-center gap-6 text-sm justify-end'>
-                <div className='flex items-center gap-1 text-sm'>
-                    <Avatar alt="Remy Sharp" src="https://img.freepik.com/foto-gratis/hombre-feliz-pie-playa_107420-9868.jpg?1" />
-                    <Link href={'/my-profile'}>Alan</Link>
-                </div>
-                <div className='flex items-center gap-6'>
-                    <Link href={'/mis-compras'}>Mis compras</Link>
-                    <Link href={'/mis-compras'}>Favoritos</Link>
-                    <Link href={'/mis-compras'}><LocalMallOutlinedIcon className='!font-thin' /></Link>
-                </div>
+                    <ProfileClient/>
+                    <div className='flex items-center gap-6'>
+               <a href={'/api/auth/logout'}>Mis compras</a>
+               <Link href={'/mis-compras'}><LocalMallOutlinedIcon className='!font-thin' /></Link>
+               </div>
             </div>
         </div>
     )
