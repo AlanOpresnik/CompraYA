@@ -2,6 +2,7 @@ import Footer from "@/components/Footer/Footer";
 import Navbar from "@/components/Navbar/Navbar";
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v13-appRouter";
 import { Lato } from "next/font/google";
+import Providers from './providers'
 import "./globals.css";
 
 const poppins = Lato({
@@ -19,9 +20,11 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={poppins.className}>
         <AppRouterCacheProvider>
-          <Navbar />
-          <div>{children}</div>
-          <Footer />
+          <Providers>
+            <Navbar />
+            <div>{children}</div>
+            <Footer />
+          </Providers>
         </AppRouterCacheProvider>
       </body>
     </html>
