@@ -27,17 +27,17 @@ const CardConfigurationProfile = () => {
 
     ]
     return (
-        <div className='bg-white p-9 w-[700px] rounded-lg  mt-12 '>
+        <div className='bg-white p-9 max-w-[700px] lg:w-[700px] rounded-lg  mt-12 '>
             {cards.map((card => (
-                <Link href={card.path} key={card.title} className='flex  gap-6 mb-12 last-of-type:mb-0 relative '>
-                    <div className='rounded-full border p-2 '>
-                        <Image className='object-contain' width={30} height={30} src={card.icon} alt={card.desc} />
+                <Link href={card.path} key={card.title} className='flex items-center gap-6 mb-12 last-of-type:mb-0 relative '>
+                    <div className='rounded-full w-fit h-full border p-2 flex items-center '>
+                        <Image className='object-contain min-w-[30px]' width={30} height={30} src={card.icon} alt={card.desc} />
                     </div>
                     <div className=''>
                         <h4 className='font-semibold'>{card.title}</h4>
                         <p className='text-sm opacity-55'>{card.desc}</p>
                     </div>
-                    <div className='absolute right-2 top-[0.75rem] text-2xl opacity-50'>{">"}</div>
+                    <div className='absolute right-[-20px] top-[0.75rem] text-2xl opacity-50'>{">"}</div>
                 </Link>
             )))}
         </div>
