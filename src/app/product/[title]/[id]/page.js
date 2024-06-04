@@ -1,7 +1,7 @@
 import { api } from "@/app/api";
 import Product from "@/components/Product/Product";
 import { Suspense } from "react";
-
+import Loader from '@/components/Loader/Loader'
 const ProductPage = async ({ params: { id } }) => {
   // pre-fetch queries as soon as the page is requested
   api.getProductById(id);
@@ -13,7 +13,7 @@ const ProductPage = async ({ params: { id } }) => {
         <Suspense
           fallback={
             <div className="w-full flex justify-center items-center h-[100vh]">
-              <div className="loader"></div>
+              <Loader/>
             </div>
           }
         >
